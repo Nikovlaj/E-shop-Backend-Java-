@@ -1,0 +1,38 @@
+# Maven build output
+/target/
+
+# Maven Wrapper Jar (vanligtvis inkluderad, men du kan ignorera om du vill)
+/.mvn/wrapper/maven-wrapper.jar
+
+# IDE filer - IntelliJ IDEA
+/.idea/
+/*.iml
+/*.iws
+
+# IDE filer - Eclipse / STS
+.classpath
+.project
+.settings/
+
+# IDE filer - NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# IDE filer - VS Code
+.vscode/
+
+# Loggfiler
+*.log
+
+# OS filer
+.DS_Store
+Thumbs.db
+
+# Kompilerade Java-filer
+*.class
+
+# Byggmappar från Gradle (ifall du byter)
+/build/
