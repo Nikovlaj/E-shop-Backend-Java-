@@ -1,6 +1,7 @@
 package com.Nikola.E_shop.ServiceTest;
 
 import com.Nikola.E_shop.Service.OrderService;
+import com.Nikola.E_shop.exception.ResourceNotFoundException;
 import com.Nikola.E_shop.model.CustomerInfo;
 import com.Nikola.E_shop.model.Order;
 import com.Nikola.E_shop.model.OrderItem;
@@ -86,7 +87,7 @@ public class OrderServiceTest {
         order.setCustomerInfo(customer);
         order.setItems(List.of(orderItem));
 
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+        ResourceNotFoundException exception = assertThrows(ResourceNotFoundException.class, () -> {
             orderService.createOrder(order);
         });
 

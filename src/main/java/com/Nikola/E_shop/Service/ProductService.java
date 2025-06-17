@@ -1,5 +1,6 @@
 package com.Nikola.E_shop.Service;
 
+import com.Nikola.E_shop.exception.ResourceNotFoundException;
 import com.Nikola.E_shop.model.Product;
 import com.Nikola.E_shop.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,9 @@ public class ProductService {
     public List<Product> getAllProducts(){
         return productRepository.findAll();
     }
-    public Optional<Product> getProductById(Long id){
-        return productRepository.findById(id);
+    public Product getProductById(Long id){
+        return productRepository.findById(id)
+                .orElseThrow(() ->
+                        new ResourceNotFoundException("Product","id", id));
     }
 }

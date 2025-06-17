@@ -1,6 +1,7 @@
 package com.Nikola.E_shop.controller;
 
 import com.Nikola.E_shop.Service.ProductService;
+import com.Nikola.E_shop.exception.ResourceNotFoundException;
 import com.Nikola.E_shop.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,8 +27,8 @@ public class ProductController {
 }
 @GetMapping("/{id}")
     public Product getProductById(@PathVariable Long id){
-    Optional<Product> product = productService.getProductById(id);
-    return product.orElseThrow(()-> new RuntimeException("Produkt med Id" + id + "finns inte"));
+    return productService.getProductById(id);
+
 }
 }
 

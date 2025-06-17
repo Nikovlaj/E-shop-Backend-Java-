@@ -52,7 +52,7 @@ Returnerar en lista med alla tillgängliga produkter.
     "description": "Beskrivning av produkt A",
     "price": 99.9,
     "imageUrl": "http://exempel.com/bild.jpg",
-    "stock": 10
+
   },
   {
     "id": 2,
@@ -60,7 +60,7 @@ Returnerar en lista med alla tillgängliga produkter.
     "description": "Beskrivning av produkt B",
     "price": 49.5,
     "imageUrl": "http://exempel.com/bild2.jpg",
-    "stock": 5
+    
   }
 ]
 ### 2. Hämta Produkt via ID  
@@ -76,7 +76,6 @@ Hämtar en Produkt med ID
     "description": "Beskrivning av produkt A",
     "price": 99.9,
     "imageUrl": "http://exempel.com/bild.jpg",
-    "stock": 10
   }
 ]
 ### 3. Skapa en Order 
